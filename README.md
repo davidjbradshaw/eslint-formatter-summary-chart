@@ -1,8 +1,5 @@
 # eslint-formatter-summary-chart
 
-[![CircleCI](https://circleci.com/gh/koba04/eslint-summary-chart-formatter.svg?style=svg)](https://circleci.com/gh/koba04/eslint-summary-chart-formatter)
-
-
 A ESLint formatter to summarize errors by rules and files using bar charts
 
 ```
