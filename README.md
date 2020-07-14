@@ -19,5 +19,7 @@ no-debugger           : ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇�
 no-unused-vars        : ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇  33.33%
 ```
 
-This is package is based on [eslint-summary-chart-formatter](https://www.npmjs.com/package/eslint-summary-chart-formatter) extended to sort the rules alphabetically and renamed for easier integration with eslint.
+_This is package is based on [eslint-summary-chart-formatter](https://www.npmjs.com/package/eslint-summary-chart-formatter) extended to sort the rules alphabetically and renamed for easier integration with eslint._
 
+----
+License: MIT
