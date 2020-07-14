@@ -2,8 +2,13 @@
 
 A ESLint formatter to summarize errors by rules and files using bar charts
 
+## Install
+```sh
+npm install eslint-formatter-summary-chart --save-dev
 ```
-% npm install eslint-formatter-summary-chart --save-dev
+
+## Usage
+```sh
 % eslint --format summary-chart src
 
 ==== Files ====
