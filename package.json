@@ -1,29 +1,55 @@
 {
-  "author": {
-    "name": "koba04"
-  },
-  "bundleDependencies": false,
+  "name": "eslint-formatter-summary-chart",
+  "description": "A ESLint formatter to summarize errors by rules and files using bar charts",
+  "version": "0.3.0",
+  "authors": [
+    "David J. Bradshaw",
+    "koba04"
+  ],
+  "bundleDependencies": [],
   "dependencies": {
-    "bar-horizontal": "^0.5.0"
+    "bar-horizontal": "^0.5.1"
   },
   "deprecated": false,
-  "description": "A ESLint formatter to summarize errors by rules and files using bar charts",
-  "devDependencies": {
-    "eslint": "^7.4.0",
-    "mocha": "^8.0.1"
-  },
   "files": [
     "lib"
   ],
   "keywords": [
-    "eslint"
+    "eslint", "formatter"
   ],
   "license": "MIT",
   "main": "lib/index.js",
-  "name": "eslint-formatter-summary-chart",
   "scripts": {
-    "lint": "eslint lib/*.js",
-    "test": "mocha"
+    "eslint": "eslint lib/*.js",
+    "test": "eslint lib/*.js --format ./lib/index.js",
+    "prepublishOnly": "npm run test",
+    "postpublish" : "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
-  "version": "0.2.1"
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-config-adjunct": "^4.11.2",
+    "eslint-config-auto": "^0.7.3",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-array-func": "^3.1.8",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-markdown": "^3.0.0",
+    "eslint-plugin-mocha": "^10.1.0",
+    "eslint-plugin-mocha-cleanup": "^1.11.3",
+    "eslint-plugin-no-constructor-bind": "^2.0.4",
+    "eslint-plugin-no-secrets": "^0.8.9",
+    "eslint-plugin-no-unsanitized": "^4.0.2",
+    "eslint-plugin-no-use-extend-native": "^0.5.0",
+    "eslint-plugin-optimize-regex": "^1.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-scanjs-rules": "^0.2.1",
+    "eslint-plugin-security": "^1.7.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-sonarjs": "^0.18.0",
+    "eslint-plugin-switch-case": "^1.1.2",
+    "eslint-plugin-unicorn": "^45.0.2",
+    "mocha": "^10.2.0",
+    "prettier": "^2.8.4"
+  }
 }

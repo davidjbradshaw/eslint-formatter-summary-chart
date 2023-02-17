@@ -1,0 +1,10 @@
+{
+  "extends": ["auto"],
+  "rules": {
+    "no-console": 0,
+    "no-plusplus": 0,
+    "unicorn/no-array-callback-reference": 0,
+    "unicorn/prefer-module": 0,
+    "unicorn/prefer-string-slice": 0
+  }
+}
